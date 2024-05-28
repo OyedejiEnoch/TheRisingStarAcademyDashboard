@@ -15,7 +15,7 @@ import {Link} from "react-router-dom"
 //   SheetDescription,
 // SheetHeader,
 
-const MobileNav = () => {
+const StudentMobileNav = () => {
   return ( 
     
     <section className="w-full max-w-[264px]" >
@@ -37,17 +37,15 @@ const MobileNav = () => {
         <div className="flex-1">
             <h2 className="text-[14px] text-gray-500">Main Menu</h2>
             <ul className="flex flex-col gap-4 p-2 mt-4">
-                <Link to="/admin" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
+                <Link to="/student" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
                 <MdSpaceDashboard className="text-[#03045E]" size={20}/> Dashboard</Link>    
-                <Link to="/admin/courses" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
-                <FaBookOpen size={20} className="text-[#03045E]" /> Courses</Link>    
-                <Link to="/admin/my-courses" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
+                 
+                <Link to="/student/my-courses" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
                 <FaBookOpen size={20} className="text-[#03045E]" /> My Courses</Link>    
-                <Link to="/admin/users" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
-                <FiUsers size={20} className="text-[#03045E]" />  Users</Link>    
-                <Link to="/admin/notice-board" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
+            
+                <Link to="/student/notice-board" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
                 <FaChalkboard size={20} className="text-[#03045E]"  /> Notice board</Link>    
-                <Link to="/admin/calender" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
+                <Link to="/student/calender" className="flex items-center gap-2 font-semibold cursor-pointer hover:bg-gray-200 transition duration-150 px-4 py-2 rounded-2xl text-[#03045E]" >
                 <SlCalender size={20} className="text-[#03045E]" />  Calender</Link>    
             </ul>
         </div>
@@ -76,4 +74,4 @@ const MobileNav = () => {
   )
 }
 
-export default MobileNav
+export default StudentMobileNav

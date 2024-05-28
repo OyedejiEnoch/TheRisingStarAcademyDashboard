@@ -8,7 +8,7 @@
 //   } from "../../../../@/components/ui/sheet"
 //   import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdNotificationsOutline } from "react-icons/io";
-  import MobileNav from "../mobileNav/MobileNav"
+  import StudentMobileNav from "../mobileNav/StudentMobileNav"
 import { useAppSelector } from "@/app/redux/hooks";
 import { useStudentProfileQuery } from "@/app/redux/api/userApi";
 
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
         <div className="sm:hidden">
-         <MobileNav />
+         <StudentMobileNav />
         </div>
         
     </nav>
