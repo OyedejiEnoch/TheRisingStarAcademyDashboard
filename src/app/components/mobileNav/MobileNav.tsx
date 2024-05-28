@@ -28,8 +28,8 @@ const MobileNav = () => {
 
         <div className="w-full  h-full flex flex-col gap-8  bg-white">
         <SheetTitle className=" flex gap-6 flex-col">
-          <h2 className="text-[20px] font-bold ">RisingStarAcademy</h2>
-        <hr className="border-[1px] text-gray-400"/>
+        <img src="/rsalogo.jpg" alt="logo" className="w-[60px] " />
+        <hr className="border-[1px] text-gray-200"/>
         </SheetTitle>
 
 

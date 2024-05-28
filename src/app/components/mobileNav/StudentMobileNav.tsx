@@ -8,7 +8,6 @@ import {
   import { RxHamburgerMenu } from "react-icons/rx";
   import { MdSpaceDashboard } from "react-icons/md";
 import { FaBookOpen } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
 import { FaChalkboard } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import {Link} from "react-router-dom"
@@ -28,8 +27,8 @@ const StudentMobileNav = () => {
 
         <div className="w-full  h-full flex flex-col gap-8  bg-white">
         <SheetTitle className=" flex gap-6 flex-col">
-          <h2 className="text-[20px] font-bold ">RisingStarAcademy</h2>
-        <hr className="border-[1px] text-gray-400"/>
+        <img src="/rsalogo.jpg" alt="logo" className="w-[60px] " />
+        <hr className="border-[1px] text-gray-200"/>
         </SheetTitle>
 
 
