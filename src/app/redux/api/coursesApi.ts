@@ -47,7 +47,7 @@ type SingleCourse={
 export const courseApi =createApi({
     reducerPath:"courseApi",
     tagTypes:["Course"],
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:4000/api',credentials: 'include' }),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://therisingstaracademy.onrender.com/api',credentials: 'include' }),
     endpoints: (builder)=>({
         allCourse:builder.query<getCourses, void>({
             query:()=> "/courses/all",

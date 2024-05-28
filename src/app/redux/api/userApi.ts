@@ -58,7 +58,7 @@ type SingleTutor ={
 export const userApi =createApi({
     reducerPath:"userApi",
     tagTypes:["User", "Tutor"],
-    baseQuery:fetchBaseQuery({baseUrl: "http://localhost:4000/api", credentials: 'include'}),
+    baseQuery:fetchBaseQuery({baseUrl: "https://therisingstaracademy.onrender.com/api", credentials: 'include'}),
     endpoints:(builder)=>({
         studentProfile: builder.query<UserDetails, void | null>({
             query:()=> "/users/my-profile",

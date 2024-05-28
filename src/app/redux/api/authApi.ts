@@ -34,7 +34,7 @@ type Login ={
 
 export const authApi =createApi({
     reducerPath:"authApi",
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:4000/api', credentials: 'include' }),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://therisingstaracademy.onrender.com/api', credentials: 'include' }),
     endpoints: (builder)=>({
         loginAdmin: builder.mutation<User, Login>({
             query:(body)=>({

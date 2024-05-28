@@ -16,7 +16,7 @@ type AllNotice={
 
 export const noticeApi =createApi({
     reducerPath:"noticeApi",
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:4000/api',credentials: 'include' }),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://therisingstaracademy.onrender.com/api',credentials: 'include' }),
     endpoints: (builder)=>({
 
         newNotice: builder.mutation<Notice, Notice>({
