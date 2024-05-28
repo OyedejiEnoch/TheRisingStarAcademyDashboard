@@ -1,9 +1,6 @@
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-// import { FcGoogle } from "react-icons/fc";
-// import { FaUser } from "react-icons/fa";
-// import { MdPassword } from "react-icons/md";
-// import { IoMdMail } from "react-icons/io";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 // import { toast } from "react-toastify";
 // import { useRegisterMutation } from "../../../app/redux/api/authApi";
@@ -62,8 +59,8 @@ const Register = () => {
   // const {name, email, password}= credentials
   const handleSubmit =(e:React.FormEvent<HTMLFormElement | HTMLTextAreaElement>)=>{
     e.preventDefault()
-    const validName=/^[a-z A-Z]+$/
-    const validEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    // const validName=/^[a-z A-Z]+$/
+    // const validEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
     // if(!name.trim()) return toast.error("Name is missing")
     // if(!validName.test(name)) return toast.error("Invalid name")

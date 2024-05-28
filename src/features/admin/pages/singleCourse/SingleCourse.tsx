@@ -6,6 +6,26 @@ import { useSingleCourseQuery } from "@/app/redux/api/coursesApi";
 import { Link, useParams } from "react-router-dom";
 import Spinner from "@/app/components/spinner/Spinner";
 
+
+type Course ={
+    _id:string,
+    title:string,
+    description:string,
+    summary:string,
+    body:string,
+    about:string,
+    topics:[{
+        title:string,
+        body:string,
+        summary:string
+    }],
+    subCourses:[],
+    image:{
+        public_id:string,
+        url:string
+    }
+}
+
 const SingleCourse =()=>{
 
     const params =useParams()
@@ -18,6 +38,7 @@ const SingleCourse =()=>{
     const [description, setDescription] = useState("");
     const [summary, setSummary] = useState("");
 
+    
 
     useEffect(()=>{
         setTitle((data?.course.title as string))
@@ -27,12 +48,6 @@ const SingleCourse =()=>{
         setSummary((data?.course.summary as string))
     }, [])
 
-    const [course, setCourse]=useState({
-        title:"",
-        body:"",
-        summary:"",
-        description:""
-    })
     type Topic ={
         title:string,
         body:string,
@@ -70,11 +85,11 @@ const SingleCourse =()=>{
         newTopics[index][name as keyof Topic] = value;
         setTopics(newTopics);
       };
-      const topicsPayload = topics.map(topic => ({
-        title: topic.title,
-        body: topic.body,
-        summary: topic.summary,
-      }));
+    //   const topicsPayload = topics.map(topic => ({
+    //     title: topic.title,
+    //     body: topic.body,
+    //     summary: topic.summary,
+    //   }));
 
     
       if(isLoading){
@@ -186,7 +201,7 @@ const SingleCourse =()=>{
             <div className=" w-[380px] border border-gray-200 p-4 flex flex-col gap-6 ">
                 <p className="text-[22px] text-semibold">Sub Courses</p>
                 <div>
-                    <Accordian course={data?.course}/>
+                    <Accordian course={(data?.course as Course)}/>
                 </div>
 
                 <Link to={`/admin/sub-course/${data?.course._id}`} className="px-4 py-3 rounded bg-[#1E0342] text-white font-semibold">Create a Sub Course</Link>

@@ -27,14 +27,14 @@ const StudentCourseCard =({courseId}:Props)=>{
     
         {/* bottom */}
         <div className="flex flex-col p-4 gap-2">
-        <h2 className="font-semibold text-[18px] font-inter">{course?.title}</h2>
-        <p className="text-sm text-gray-500">{course?.description} </p>
+        <h2 className="font-semibold text-[18px] font-inter">{course?.course.title}</h2>
+        <p className="text-sm text-gray-500">{course?.course.description} </p>
         </div>
     
     
         <div className="flex items-center justify-between px-4 py-2">
-          <span className="flex items-center text-sm text-gray-500 gap-2"><IoMdBook size={24} className="text-[#687EFF]" />{course?.topics?.length} topics</span>
-          <span className="flex items-center text-sm text-gray-500 gap-2"><IoMdBookmark size={24} className="text-[#fca3c4]" /> {course?.subCourses?.length} Sub courses</span>
+          <span className="flex items-center text-sm text-gray-500 gap-2"><IoMdBook size={24} className="text-[#687EFF]" />{course?.course.topics?.length} topics</span>
+          <span className="flex items-center text-sm text-gray-500 gap-2"><IoMdBookmark size={24} className="text-[#fca3c4]" /> {course?.course.subCourses?.length} Sub courses</span>
         </div>
     
         <hr />

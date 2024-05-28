@@ -13,8 +13,8 @@ import AdminBio from './features/admin/auth/register/AdminBio'
 import AdminLayout from './features/admin/AdminLayout'
 import StudentLayout from './features/student/StudentLayout'
 import CreateSubCourse from './features/admin/pages/courses/CreateSubCourse'
-import AdminProtectedRoute from './app/components/AdminProtectedRoute'
-import StudentProtectedRoute from './app/components/StudentProtectedRoute'
+// import AdminProtectedRoute from './app/components/AdminProtectedRoute'
+// import StudentProtectedRoute from './app/components/StudentProtectedRoute'
 
 function App() {
 
@@ -122,7 +122,7 @@ function App() {
             <Route path='/' element={<StudentLogin />} />
           </Route>
 
-          <Route path='/student' element={<StudentProtectedRoute><StudentLayout /></StudentProtectedRoute>}>
+          <Route path='/student' element={<StudentLayout />}>
             <Route index element={<StudentHome />} />
             <Route path='my-courses' element={<StudentCourses />} />
             <Route path='notice-board' element={<StudentNoticeBoard />} />
@@ -130,7 +130,7 @@ function App() {
           </Route>
 
 
-          <Route path='/admin' element={<AdminProtectedRoute> <AdminLayout /> </AdminProtectedRoute>}>
+          <Route path='/admin' element={ <AdminLayout /> }>
             <Route index element={<Home />} />
             <Route path='courses' element={<Courses />} />
             <Route path='courses/:id' element={<SingleCourse />} />

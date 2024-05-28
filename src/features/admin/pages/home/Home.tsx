@@ -1,4 +1,4 @@
-import TutorTable from "@/app/components/tutorTable/TutorTable";
+// import TutorTable from "@/app/components/tutorTable/TutorTable";
 import { HomeNoticeBoard } from "..";
 import HomeBox from "../../../../app/components/homeBox/HomeBox"
 import HomeChart from "../../../../app/components/homeChart/HomeChart"

@@ -31,7 +31,7 @@ const Accordian = ({course}:Props) => {
   
   return (
     <Accordion type="single" collapsible className="w-full">
-      {course.subCourses.map((course, index)=>(
+      {course.subCourses.map((_, index)=>(
           <AccordionItem key={index} value={ `item-${index}`}>
            <AccordionTrigger>SubCourse</AccordionTrigger>
            <AccordionContent>

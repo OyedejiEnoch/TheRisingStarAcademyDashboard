@@ -1,5 +1,5 @@
 // import { sidebarMenu } from "../../../constants/constants"
-import {useEffect, useState} from "react"
+import {useState} from "react"
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaBookOpen } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
@@ -9,7 +9,7 @@ import {Link, useLocation, NavLink} from "react-router-dom"
 
 const Sidebar = () => {
     const location =useLocation()
-    const [activeLink, setActiveLink] =useState(location.pathname)
+    const [activeLink] =useState(location.pathname)
 
     // useEffect(()=>{
     //     setActiveLink(( as any))

@@ -1,5 +1,5 @@
 import { DataGrid, GridColDef, GridToolbar } from '@mui/x-data-grid';
-import { MdDeleteForever, MdEdit } from 'react-icons/md';
+import { MdEdit } from 'react-icons/md';
 import "./DataTable.css"
 import {v4 as uuidv4} from "uuid"
 import {Link} from "react-router-dom"
@@ -17,9 +17,9 @@ type Props ={
 }
 
 
-const handleDelete =({id}:any)=>{
+// const handleDelete =({id}:any)=>{
 
-}
+// }
 
 const DataTable = (props:Props) => {
 
@@ -28,10 +28,10 @@ const DataTable = (props:Props) => {
         
             <div className="flex items-center w-full h-full gap-2 cursor-pointer">
                  <Link to={`/${props.link}/${params.row._id}`} >
-                    <span className="text-[#3ec555] outline-dashed outline-1 p-2   "> View</span>
+                    <span className="text-[#3ec555] outline-dashed outline-1 p-2   "> <MdEdit size={24} /></span>
                 </Link>
            
-            {props.page === "tutor" ? "" : <div className="delete" onClick={()=> handleDelete(params.row._id)} >
+            {props.page === "tutor" ? "" : <div className="delete"  >
               {/* <span className="text-[#e90404]"><MdDeleteForever size={24} /> </span> */}
               <DeleteDrawer />
             </div>}
